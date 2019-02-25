@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table style="width:100%">
+  <tr>
+    <th>Bought/Sold</th>
+    <th>Stock symbol</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Date/time</th>
+  </tr>
+  <tr>
+    <td>{%for stock in stocks%}
+        <p>{{stock.buysell}}</p>
+    {%endfor%}</td>
+    <td>{%for stock in stocks%}
+        <p>{{stock.symbol}}</p>
+    {%endfor%}</td>
+    <td>{%for stock in stocks%}
+        <p>{{stock.quantity}}</p>
+    {%endfor%}</td>
+    <td>{%for stock in stocks%}
+        <p>{{stock.price}}</p>
+    {%endfor%}</td>
+    <td>{%for stock in stocks%}
+        <p>{{stock.datetime}}</p>
+    {%endfor%}</td>
+  </tr>
+</table>
+
+
+
+{% endblock %}
+
